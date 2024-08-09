@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 52 37 31;
+    --color-secondary: 64 63 63;
+    --color-white: 255 255 255;
+    --color-section-bg: 238 221 204;
+    --color-footer-bg: 52 52 52;
+    --color-gray-bg: 172 175 190;
+  }
+}
+
+.container {
+  max-width: 1440px;
+}

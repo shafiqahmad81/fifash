@@ -3,9 +3,127 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FIFASH | Home</title>
+    <title>Fifash | Home</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <h1>FIFASH Project</h1>
+  <body class="text-primary font-Frank">
+    <main class="min-w-80">
+      <!-- Header Section -->
+      <header class="bg-section_bg pt-5 md:pt-10 pb-4">
+        <div
+          class="container mx-auto px-4 lg:px-space-x-18 flex md:items-center gap-1 sm:gap-3 lg:gap-6 relative"
+        >
+          <div class="">
+            <h2
+              class="text-2xl md:text-3.2xl md:leading-7.2 font-Lato font-black"
+            >
+              FIFASH
+            </h2>
+          </div>
+          <div class="flex-grow text-center mt-10 md:mt-0 relative z-20">
+            <ul class="md:flex justify-center font-Lato hidden">
+              <li class="py-2 px-2 text-base md:text-xl uppercase font-normal">
+                <a href="#">Men</a>
+              </li>
+              <li class="py-2 px-2 text-lg md:text-xl uppercase font-normal">
+                <a href="#">Woman</a>
+              </li>
+              <li class="py-2 px-2 text-lg md:text-xl uppercase font-normal">
+                <a href="#">Kids</a>
+              </li>
+              <li class="py-2 px-2 text-lg md:text-xl uppercase font-normal">
+                <a href="#">coLLECTION</a>
+              </li>
+              <li class="py-2 px-2 text-lg md:text-xl uppercase font-normal">
+                <a href="#">TRENDS</a>
+              </li>
+              <button
+                class="font-Lato font-normal text-xl tracking-widest border border-primary w-full py-2 rounded-2xl bg-transparent md:hidden relative z-20"
+              >
+                LOGIN
+              </button>
+            </ul>
+          </div>
+          <div class="min-w-8 relative z-20">
+            <img class="w-full" src="img/envelab-icn.svg" alt="Envelabi icn" />
+          </div>
+
+          <div class="w-52 hidden md:block">
+            <button
+              class="font-Lato font-normal text-xl tracking-widest border border-primary w-full px-4 py-2 lg:py-4 rounded-2xl bg-transparent relative z-20"
+            >
+              LOGIN
+            </button>
+          </div>
+
+          <!-- Mobile menu -->
+          <div class="md:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-10 h-10 -mt-1 cursor-pointer relative z-20"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </div>
+          <div
+            class="w-[19.930%] aspect-square bg-gray_bg/35 absolute -top-10 right-0 z-10"
+          ></div>
+        </div>
+      </header>
+
+      <!-- Hero Section -->
+      <section class="bg-section_bg pt-10 md:pt-28 pb-10 md:pb-32">
+        <div
+          class="container mx-auto px-4 lg:px-space-x-18 flex flex-col md:flex-row gap-10 relative"
+        >
+          <div
+            class="w-full md:w-1/2 order-2 md:order-1 text-center md:text-start relative"
+          >
+            <h1
+              class="text-4xl sm:text-5xl lg:text-6xl lg:leading-11 font-bold md:max-w-[448px]"
+            >
+              find the best fashion style for you
+            </h1>
+            <p
+              class="text-base leading-7 font-bold md:max-w-[468px] mt-space-5.22 mb-space-7.22"
+            >
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book.
+            </p>
+            <button
+              class="py-6 px-24 rounded-lg text-base leading-5 bg-primary text-secondary_white relative z-20"
+            >
+              shop now
+            </button>
+            <img
+              class="absolute -top-[100px] -left-20 lg:-left-[132px]"
+              src="img/abarar-bg.png"
+              alt=""
+            />
+          </div>
+          <div class="w-full md:w-1/2 order-1 md:order-2 relative z-20">
+            <img class="w-full" src="img/abatar-1.png" alt="" />
+          </div>
+
+          <div
+            class="w-[19.930%] aspect-square bg-gray_bg/35 absolute -bottom-10 md:-bottom-32 left-0 z-10"
+          ></div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
