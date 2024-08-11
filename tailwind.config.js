@@ -28,6 +28,9 @@ module.exports = {
         7.2: "1.875rem", //30px
         11: "5.375rem", //86px
       },
+      dropShadow: {
+        "3xl": "2px 2px 2px rgba(0, 0, 0, 0.16)",
+      },
     },
   },
   plugins: [],
