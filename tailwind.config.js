@@ -31,6 +31,9 @@ module.exports = {
       dropShadow: {
         "3xl": "2px 2px 2px rgba(0, 0, 0, 0.16)",
       },
+      maxWidth: {
+        "8xl": "94%",
+      },
     },
   },
   plugins: [],
