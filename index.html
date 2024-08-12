@@ -25,7 +25,7 @@
             </h2>
           </div>
           <div class="flex-grow text-center mt-10 md:mt-0 relative z-20">
-            <ul class="md:flex justify-center font-Lato hidden">
+            <ul id="menu" class="md:flex justify-center font-Lato hidden">
               <li class="py-2 px-2 text-base md:text-xl uppercase font-normal">
                 <a href="#">Men</a>
               </li>
@@ -61,22 +61,36 @@
           </div>
 
           <!-- Mobile menu -->
-          <div class="md:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentcolor"
-              class="w-10 h-10 -mt-1 cursor-pointer relative z-20"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-            </svg>
-          </div>
+          <svg
+            id="menu-btn"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentcolor"
+            class="w-10 h-10 -mt-1 cursor-pointer relative z-20 md:hidden"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+          <svg
+            id="close-btn"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-10 h-10 -mt-1 cursor-pointer relative z-20 hidden"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            />
+          </svg>
           <div
             class="w-[19.930%] aspect-square bg-gray_bg/35 absolute -top-10 right-0 z-10"
           ></div>
@@ -1417,5 +1431,7 @@
         </div>
       </section>
     </main>
+
+    <script type="module" src="main.js"></script>
   </body>
 </html>
