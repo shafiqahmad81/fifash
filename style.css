@@ -16,3 +16,48 @@
 .container {
   max-width: 1440px;
 }
+
+.splide__pagination {
+  padding: 0;
+  right: inherit;
+  justify-content: start;
+}
+
+.splide__pagination__page {
+  height: 12px;
+  margin-right: 8px;
+  opacity: 1;
+  width: 12px;
+}
+
+.best-seller-slider {
+  .splide__pagination__page {
+    background: inherit;
+    border: 1px solid #fff;
+  }
+  .splide__pagination {
+    bottom: -2.375em;
+    left: 20px;
+  }
+  .splide__pagination__page.is-active {
+    transform: inherit;
+    background: #fff;
+  }
+}
+
+.splides {
+  .splide__pagination {
+    bottom: -4.5em;
+    left: 0;
+    right: 0;
+    justify-content: center;
+  }
+  .splide__pagination__page {
+    background: #ffff;
+    border: 1px solid #34251f;
+  }
+  .splide__pagination__page.is-active {
+    transform: inherit;
+    background: #34251f;
+  }
+}
