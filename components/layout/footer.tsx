@@ -20,7 +20,7 @@ function Footer() {
 							<a href=""> TRENDS</a>
 						</li>
 					</ul>
-					<h5 className="text-base font-Lato font-normal text-secondary_white">
+					<h5 className="text-base font-lato font-normal text-secondary_white">
 						copyright fifash all right reserved
 					</h5>
 				</div>
