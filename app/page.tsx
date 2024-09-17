@@ -1,5 +1,9 @@
+import Card from "@/components/ui/card";
+import { products } from "@/lib/data";
 import { Metadata } from "next";
 import Image from "next/image";
+import ProductSlider from "./_components/product-slider";
+import ReviewsSlider from "./_components/reviews-slider";
 
 export const metadata: Metadata = {
 	title: "Fifash | Home",
@@ -57,6 +61,338 @@ export default function Home() {
 						height={127}
 						priority
 					/>
+				</div>
+			</section>
+
+			<section className="mt-10 md:mt-24">
+				<div className="container mx-auto px-4 lg:px-space-x-18">
+					<div className="text-center">
+						<h2 className="text-5xl md:text-6xl md:leading-11 font-bold mb-8 capitalize">
+							new collection
+						</h2>
+						<p className="text-base leading-7 font-bold">
+							when an unknown printer took a galley of type and scrambled
+							it to make a type specimen book.
+						</p>
+					</div>
+					<div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 relative">
+						<Image
+							className="absolute -bottom-4 -left-12 z-30"
+							src="/img/abarar-bg.png"
+							alt="abatar"
+							width={124}
+							height={127}
+						/>
+						<Image
+							className="absolute -top-8 -right-12 z-30"
+							src="/img/abarar-bg.png"
+							alt="abatar"
+							width={124}
+							height={127}
+						/>
+						<figure className="relative">
+							<Image
+								className="w-full"
+								src="/img/abatar-2.jpg"
+								alt="abatar img"
+								width={411}
+								height={490}
+							/>
+							<figcaption className="py-5 bg-secondary_white text-center absolute bottom-4 md:bottom-6 left-5 md:left-10 right-5 md:right-10 rounded-lg">
+								SWEATER
+							</figcaption>
+						</figure>
+						<figure className="relative">
+							<Image
+								className="w-full"
+								src="/img/abatar-3.jpg"
+								alt="abatar img"
+								width={411}
+								height={490}
+							/>
+							<figcaption className="py-5 bg-secondary_white text-center absolute bottom-4 md:bottom-6 left-5 md:left-10 right-5 md:right-10 rounded-lg">
+								SWEATER
+							</figcaption>
+						</figure>
+						<figure className="relative">
+							<Image
+								className="w-full"
+								src="/img/abatar-4.jpg"
+								alt="abatar img"
+								width={411}
+								height={490}
+							/>
+							<figcaption className="py-5 bg-secondary_white text-center absolute bottom-4 md:bottom-6 left-5 md:left-10 right-5 md:right-10 rounded-lg">
+								SWEATER
+							</figcaption>
+						</figure>
+					</div>
+				</div>
+			</section>
+
+			<section className="mt-14 md:mt-28 mb-20">
+				<div className="container mx-auto px-4 lg:px-space-x-18 relative">
+					<div className="flex flex-col md:flex-row gap-[7.441%] justify-center items-center">
+						<div className="w-4/5 md:w-1/2 order-2 md:order-1 relative">
+							<div className="w-[27.272%] bg-section_bg/80 absolute -bottom-7 -left-4 aspect-square" />
+							<Image
+								className="absolute -top-4 -right-16"
+								src="/img/abarar-bg.png"
+								alt="abatar"
+								width={124}
+								height={127}
+							/>
+							<Image
+								className="w-full"
+								src="/img/abatar-5.jpg"
+								alt="abatar img"
+								width={597}
+								height={687}
+							/>
+						</div>
+						<div className="w-4/5 md:w-1/2 order-1 md:order-2 text-center md:text-left mb-10">
+							<h2 className="text-5xl lg:text-6xl lg:leading-11 font-bold md:max-w-[402px] mb-5">
+								BEST Fashion Since 2022
+							</h2>
+							<p className="text-base leading-8 font-bold md:max-w-[467px]">
+								Lorem Ipsum is simply dummy text of the printing and
+								typesetting industry. Lorem Ipsum has been the
+								industry's standard dummy text ever since the 1500s,
+								when an unknown printer took a galley of type and
+								scrambled it to make a type specimen book. It has
+								survived not only five centuries, but also the leap into
+								electronic typesetting, remaining essentially unchanged.
+							</p>
+						</div>
+					</div>
+					<div className="w-3/5 md:w-[730px] max-w-full bg-secondary_white rounded-2xl py-7 lg:py-[50px] px-8 lg:px-[61px] flex items-center justify-between flex-col md:flex-row drop-shadow-3xl m-auto md:ml-auto lg:mr-20 -mt-10 lg:-mt-16 gap-5">
+						<div className="text-end">
+							<h3 className="text-4xl leading-8 font-bold font-Lato md:mb-3">
+								2022
+							</h3>
+							<h5 className="text-base leading-8 font-bold">
+								Fifash Founded
+							</h5>
+						</div>
+						<div className="text-end">
+							<h3
+								className="count text-4xl leading-8 font-bold font-Lato md:mb-3"
+								data-target={86000}>
+								86000
+							</h3>
+							<h5 className="text-base leading-8 font-bold">
+								Product Sold
+							</h5>
+						</div>
+						<div className="text-end">
+							<h3
+								className="count text-4xl leading-8 font-bold font-Lato md:mb-3"
+								data-target={69000}>
+								69000
+							</h3>
+							<h5 className="text-base leading-8 font-bold">
+								Best Reviews
+							</h5>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section className="mt-8 md:mt-16 lg:mt-32 bg-primary">
+				<div className="container mx-auto px-4 md:pl-space-7.22 xl:pl-space-x-18 py-10 md:py-20">
+					<div className="flex items-center flex-col md:flex-row">
+						<div className="w-full lg:w-[420px] md:pr-7 mb-10 md:mb-0 text-center md:text-start">
+							<h2 className="text-5xl xl:text-6xl xl:leading-11 font-bold text-secondary_white mb-3 capitalize">
+								best seller product
+							</h2>
+							<p className="text-base leading-7.2 font-bold text-secondary_white">
+								Lorem Ipsum is simply dummy text of the printing and
+								typesetting industry. Lorem Ipsum has been the
+								industry's standard dummy text ever since the 1500s,
+								when an unknown printer took a galley of type and
+								scrambled it to make a type specimen book. It has
+								survived not only five centuries, .
+							</p>
+							<button className="py-5 px-16 xl:px-24 rounded-lg text-base leading-5 bg-primary text-secondary_white relative z-20 border border-secondary_white mt-9">
+								see more
+							</button>
+						</div>
+						<div className="w-full lg:w-[calc(100%-420px)]">
+							<ProductSlider />
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section className="mt-10 sm:mt-16 md:mt-24">
+				<div className="text-center mb-10 sm:mb-20">
+					<h2 className="text-5xl md:text-6xl md:leading-11 font-bold mb-5 capitalize">
+						our product
+					</h2>
+					<div className="flex justify-center mx-auto">
+						<ul className="flex items-center flex-col sm:flex-row gap-4 sm:gap-10">
+							<li className="text-xl leading-7.2 font-bold font-Lato uppercase relative before:absolute before:-bottom-0.5 before:-left-1 before:-right-1 before:content[''] before:h-1 before:bg-primary">
+								<a href="">hot </a>
+							</li>
+							<li className="text-xl leading-7.2 font-normal font-Lato uppercase text-secondary transition-all duration-500 relative before:transition-all before:duration-1000 hover:font-bold hover:before:absolute hover:before:-bottom-0.5 hover:before:-left-1 hover:before:-right-1 hover:before:content[''] hover:before:h-1 hover:before:bg-primary">
+								<a href="">onsale</a>
+							</li>
+							<li className="text-xl leading-7.2 font-normal font-Lato uppercase text-secondary transition-all duration-500 relative before:transition-all before:duration-1000 hover:font-bold hover:before:absolute hover:before:-bottom-0.5 hover:before:-left-1 hover:before:-right-1 hover:before:content[''] hover:before:h-1 hover:before:bg-primary">
+								<a href="">trending now</a>
+							</li>
+							<li className="text-xl leading-7.2 font-normal font-Lato uppercase text-secondary transition-all duration-500 relative before:transition-all before:duration-1000 hover:font-bold hover:before:absolute hover:before:-bottom-0.5 hover:before:-left-1 hover:before:-right-1 hover:before:content[''] hover:before:h-1 hover:before:bg-primary">
+								<a href="">new arrival</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div className="container mx-auto px-4 lg:px-space-x-18">
+					<div className="grid justify-items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-9">
+						{products.map((product, i) => (
+							<Card data={product} key={i} />
+						))}
+					</div>
+				</div>
+			</section>
+
+			<section className="my-10 sm:my-16 md:my-24">
+				<div className="container mx-auto px-4 lg:px-space-x-18">
+					<div className="bg-section_bg flex flex-col md:flex-row gap-10 pt-14 px-4 xl:px-[73px] relative">
+						<div className="w-full md:w-1/2 order-2 md:order-1 text-center md:text-start pb-12 relative">
+							<h1 className="text-4xl sm:text-5xl lg:text-6xl lg:leading-11 font-bold md:max-w-[448px] capitalize mt-5">
+								deal of the doy
+							</h1>
+							<p className="text-base leading-7 font-bold md:max-w-[468px] mt-space-5.22 mb-space-7.22">
+								Lorem Ipsum is simply dummy text of the printing and
+								typesetting industry. Lorem Ipsum has been the
+								industry's standard dummy text ever since the 1500s,
+							</p>
+							<div className="flex justify-center items-center flex-col sm:flex-row md:justify-start gap-space-7.22 mb-10 overflow-auto">
+								<div className="w-24 h-24 bg-secondary_white text-center px-5 py-3 rounded-md">
+									<h2 className="text-5xl leading-9 font-Lato font-bold mb-2 days">
+										03
+									</h2>
+									<span className="text-xl leading-7.2 font-Lato font-normal">
+										Day
+									</span>
+								</div>
+								<div className="w-24 h-24 bg-secondary_white text-center px-5 py-3 rounded-md">
+									<h2 className="text-5xl leading-9 font-Lato font-bold mb-2 hours">
+										08
+									</h2>
+									<span className="text-xl leading-7.2 font-Lato font-normal">
+										Hour
+									</span>
+								</div>
+								<div className="w-24 h-24 bg-secondary_white text-center px-5 py-3 rounded-md">
+									<h2 className="text-5xl leading-9 font-Lato font-bold mb-2 minutes">
+										09
+									</h2>
+									<span className="text-xl leading-7.2 font-Lato font-normal">
+										Minute
+									</span>
+								</div>
+								<div className="w-24 h-24 bg-secondary_white text-center px-5 py-3 rounded-md">
+									<h2 className="text-5xl leading-9 font-Lato font-bold mb-2 seconds">
+										09
+									</h2>
+									<span className="text-xl leading-7.2 font-Lato font-normal">
+										Sceond
+									</span>
+								</div>
+							</div>
+							<button className="py-6 px-20 md:px-24 rounded-lg text-xl leading-7.2 font-Lato font-normal bg-primary text-secondary_white">
+								shop now
+							</button>
+						</div>
+						<div className="w-4/5 md:w-1/2 m-auto order-1 md:order-2 relative z-20">
+							<Image
+								className="w-full aspect-square"
+								src="/img/abatar-16.jpg"
+								alt=""
+								width={512}
+								height={512}
+							/>
+							<Image
+								className="absolute -translate-y-2/4 top-1/2 -right-10 z-30"
+								src="/img/abarar-bg.png"
+								alt=""
+								width={127}
+								height={107}
+							/>
+						</div>
+						<Image
+							className="absolute top-0 left-0"
+							src="/img/abarar-bg.png"
+							alt=""
+							width={127}
+							height={107}
+						/>
+					</div>
+				</div>
+			</section>
+
+			<section className="pb-10 sm:pb-16 md:pb-32">
+				<div className="container mx-auto px-4 lg:px-space-x-18 text-center mb-16">
+					<h2 className="text-5xl md:text-6xl md:leading-11 font-bold mb-8 capitalize">
+						what people say about us
+					</h2>
+					<p className="text-base leading-7 font-bold">
+						when an unknown printer took a galley of type and scrambled it
+						to make a type specimen book.
+					</p>
+				</div>
+				<div className="container mx-auto px-4 lg:px-space-x-18">
+					<ReviewsSlider />
+				</div>
+			</section>
+
+			<section className="relative">
+				<div className="container mx-auto">
+					<div
+						className="flex justify-center flex-wrap 2xl:justify-center overflow-x-auto"
+						id="scrollable_items">
+						<Image
+							src="/img/abatar-17.jpg"
+							alt="abatar"
+							width={288}
+							height={389}
+							className="object-cover"
+						/>
+						<Image
+							src="/img/abatar-18.jpg"
+							alt="abatar"
+							width={288}
+							height={389}
+							className="object-cover"
+						/>
+						<Image
+							src="/img/abatar-19.jpg"
+							alt="abatar"
+							width={288}
+							height={389}
+							className="object-cover"
+						/>
+						<Image
+							src="/img/abatar-20.jpg"
+							alt="abatar"
+							width={288}
+							height={389}
+							className="object-cover"
+						/>
+						<Image
+							src="/img/abatar-21.jpg"
+							alt="abatar"
+							width={288}
+							height={389}
+							className="object-cover"
+						/>
+					</div>
+				</div>
+				<div className="w-[542px] max-w-8xl py-5 md:py-9 px-7 md:px-14 bg-secondary_white absolute -bottom-12 left-1/2 -translate-x-1/2 z-30 text-center">
+					<h4 className="text-base sm:text-lg md:text-xl md:leading-7.2 font-Lato font-black text-black uppercase">
+						follow our instagram:@fifash trends
+					</h4>
 				</div>
 			</section>
 		</main>
