@@ -2,22 +2,36 @@ import { Product } from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+type ImageSize = {
+	width?: number;
+	height?: number;
+};
 
-function Card({ data }: { data: Product }) {
+function Card({
+	data,
+	imageSize,
+	className,
+}: {
+	data: Product;
+	imageSize?: ImageSize;
+	className?: string;
+}) {
 	const {
 		imageUrl = "img/abatar-15.jpg",
 		name,
 		price,
 		discountedPrice,
 	} = data;
+
+	const { width = 296, height = 378 } = imageSize || {};
 	return (
-		<figure className="flex flex-col h-full">
+		<figure className={`flex flex-col h-full ${className}`}>
 			<Link className="flex-1" href="#">
 				<Image
 					className="w-full h-full"
 					src={imageUrl}
-					width={296}
-					height={378}
+					width={width}
+					height={height}
 					alt="abatar"
 				/>
 			</Link>

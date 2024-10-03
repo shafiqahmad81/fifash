@@ -1,12 +1,11 @@
-import Card from "@/components/ui/card";
 import { products } from "@/lib/data";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Counters from "./_components/counters";
 import ProductSlider from "./_components/product-slider";
-import ReviewsSlider from "./_components/reviews-slider";
 import ProductSection from "./_components/products-tab";
+import ReviewsSlider from "./_components/reviews-slider";
 
 export const metadata: Metadata = {
 	title: "Fifash | Home",
@@ -36,7 +35,7 @@ export default function Home() {
 					</div>
 
 					{/* Right Image Section */}
-					<div className="w-4/5 md:w-1/2 m-auto order-1 md:order-2 relative z-20">
+					<div className="w-4/5 md:w-1/2 m-auto order-1 md:order-2 relative z-20 max-md:mb-6">
 						<Image
 							src="/img/abatar-1.png"
 							alt="Avatar"
@@ -67,7 +66,7 @@ export default function Home() {
 				</div>
 			</section>
 			{/* new collection */}
-			<section className="mt-10 md:mt-24">
+			<section className="mt-10 md:mt-24 overflow-hidden">
 				<div className="container mx-auto px-4 lg:px-space-x-18">
 					<div className="text-center">
 						<h2 className="text-5xl md:text-6xl md:leading-11 font-bold mb-8 capitalize">
@@ -188,10 +187,10 @@ export default function Home() {
 			</section>
 
 			{/* bestseller */}
-			<section className="mt-8 md:mt-16 lg:mt-32 bg-primary">
+			<section className="mt-8 md:mt-16 lg:mt-32 bg-primary overflow-hidden">
 				<div className="container mx-auto px-4 md:pl-space-7.22 xl:pl-space-x-18 py-10 md:py-20">
 					<div className="flex items-center flex-col md:flex-row">
-						<div className="w-full lg:w-[420px] md:pr-7 mb-10 md:mb-0 text-center md:text-start">
+						<div className="w-full md:w-[420px] md:pr-7 mb-10 md:mb-0 text-center md:text-start">
 							<h2 className="text-5xl xl:text-6xl xl:leading-11 font-bold text-secondary_white mb-3 capitalize">
 								best seller product
 							</h2>
@@ -207,7 +206,7 @@ export default function Home() {
 								see more
 							</button>
 						</div>
-						<div className="w-full lg:w-[calc(100%-420px)]">
+						<div className="w-full md:w-[calc(100%-420px)]">
 							<ProductSlider />
 						</div>
 					</div>

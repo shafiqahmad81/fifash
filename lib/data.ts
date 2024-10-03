@@ -34,7 +34,7 @@ const products: Product[] = [
 		rating: 5,
 		imageUrl: "/img/abatar-10.jpg", // Placeholder for actual image URL
 		description: "A stylish pastel long sleeve for casual wear.",
-		tags: ["trending now", "new arrival"],
+		tags: ["trending now", "new arrival", "hot"],
 	},
 	{
 		name: "pastel long sleeve",
@@ -61,7 +61,7 @@ const products: Product[] = [
 		rating: 5,
 		imageUrl: "/img/abatar-11.jpg", // Placeholder for actual image URL
 		description: "A stylish pastel long sleeve for casual wear.",
-		tags: ["onsale", "new arrival"],
+		tags: ["onsale", "new arrival", "hot"],
 	},
 	{
 		name: "pastel long sleeve",
@@ -79,7 +79,7 @@ const products: Product[] = [
 		rating: 5,
 		imageUrl: "/img/abatar-13.jpg", // Placeholder for actual image URL
 		description: "A stylish pastel long sleeve for casual wear.",
-		tags: ["onsale", "trending now"],
+		tags: ["onsale", "trending now", "hot"],
 	},
 ];
 

@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/isotope-layout": "^3.0.14",
     "framer-motion": "^11.5.4",
+    "isotope-layout": "^3.0.6",
     "next": "14.2.11",
     "react": "^18",
     "react-dom": "^18",

@@ -7,14 +7,24 @@ import "swiper/swiper-bundle.css";
 function ReviewsSlider() {
 	return (
 		<Swiper
-			spaceBetween={24}
-			slidesPerView={2.66}
-			centeredSlides={true}
-			wrapperClass="-ml-[19%]"
+			spaceBetween={16}
+			slidesPerView={1.1}
+			wrapperClass="lg:-ml-[19%]"
+			loop
+			breakpoints={{
+				576: {
+					slidesPerView: 1.3,
+				},
+				992: {
+					slidesPerView: 2.66,
+					spaceBetween: 24,
+					centeredSlides: true,
+				},
+			}}
 			centeredSlidesBounds={true}>
 			{products.map((product, i) => (
-				<SwiperSlide className="!h-auto" key={i}>
-					<div className="w-[541px] max-w-full px-12 pt-8 pb-5 bg-section_bg/30 text-center">
+				<SwiperSlide className="!h-auto lg:max-w-[469px]" key={i}>
+					<div className="max-w-full px-12 pt-8 pb-5 bg-section_bg/30 text-center">
 						<h4 className="capitalize text-2xl leading-10 font-bold mb-4 max-w-[407px] mx-auto">
 							comfortable and all my expectation! i ordered a medium and
 							fit perfectly
