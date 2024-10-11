@@ -1,11 +1,16 @@
-import { products } from "@/lib/data";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Counters from "./_components/counters";
+// import ProductSection from "./_components/isotop-product-filter";
 import ProductSlider from "./_components/product-slider";
-import ProductSection from "./_components/products-tab";
 import ReviewsSlider from "./_components/reviews-slider";
+import DealOfTheDay from "./_components/deal-section";
+import dynamic from "next/dynamic";
+const ProductSection = dynamic(
+	() => import("./_components/isotop-product-filter"),
+	{ ssr: false }
+);
 
 export const metadata: Metadata = {
 	title: "Fifash | Home",
@@ -16,7 +21,7 @@ export default function Home() {
 	return (
 		<main>
 			<section className="bg-section_bg pt-10 md:pt-28 pb-10 md:pb-32">
-				<div className="container mx-auto px-4 lg:px-space-x-18 flex flex-col md:flex-row relative">
+				<div className="container flex flex-col md:flex-row relative">
 					{/* Left Text Section */}
 					<div className="w-full md:w-1/2 order-2 md:order-1 text-center md:text-start relative">
 						<h1 className="text-4xl sm:text-5xl lg:text-6xl lg:leading-11 font-bold md:max-w-[448px] capitalize">
@@ -65,9 +70,10 @@ export default function Home() {
 					/>
 				</div>
 			</section>
+
 			{/* new collection */}
 			<section className="mt-10 md:mt-24 overflow-hidden">
-				<div className="container mx-auto px-4 lg:px-space-x-18">
+				<div className="container">
 					<div className="text-center">
 						<h2 className="text-5xl md:text-6xl md:leading-11 font-bold mb-8 capitalize">
 							new collection
@@ -148,7 +154,7 @@ export default function Home() {
 
 			{/* Overview */}
 			<section className="mt-14 md:mt-28 mb-20">
-				<div className="container mx-auto px-4 lg:px-space-x-18 relative">
+				<div className="container relative">
 					<div className="flex flex-col md:flex-row gap-[7.441%] justify-center items-center">
 						<div className="w-4/5 md:w-1/2 order-2 md:order-1 relative">
 							<div className="w-[27.272%] bg-section_bg/80 absolute -bottom-7 -left-4 aspect-square" />
@@ -188,7 +194,7 @@ export default function Home() {
 
 			{/* bestseller */}
 			<section className="mt-8 md:mt-16 lg:mt-32 bg-primary overflow-hidden">
-				<div className="container mx-auto px-4 md:pl-space-7.22 xl:pl-space-x-18 py-10 md:py-20">
+				<div className="container py-10 md:py-20">
 					<div className="flex items-center flex-col md:flex-row">
 						<div className="w-full md:w-[420px] md:pr-7 mb-10 md:mb-0 text-center md:text-start">
 							<h2 className="text-5xl xl:text-6xl xl:leading-11 font-bold text-secondary_white mb-3 capitalize">
@@ -214,89 +220,14 @@ export default function Home() {
 			</section>
 
 			{/* Products */}
-			<ProductSection products={products} />
+			<ProductSection />
 
 			{/* deal */}
-			<section className="my-10 sm:my-16 md:my-24">
-				<div className="container mx-auto px-4 lg:px-space-x-18">
-					<div className="bg-section_bg flex flex-col md:flex-row gap-10 pt-14 px-4 xl:px-[73px] relative">
-						<div className="w-full md:w-1/2 order-2 md:order-1 text-center md:text-start pb-12 relative">
-							<h1 className="text-4xl sm:text-5xl lg:text-6xl lg:leading-11 font-bold md:max-w-[448px] capitalize mt-5">
-								deal of the doy
-							</h1>
-							<p className="text-base leading-7 font-bold md:max-w-[468px] mt-space-5.22 mb-space-7.22">
-								Lorem Ipsum is simply dummy text of the printing and
-								typesetting industry. Lorem Ipsum has been the
-								industry's standard dummy text ever since the 1500s,
-							</p>
-							<div className="flex justify-center items-center flex-col sm:flex-row md:justify-start gap-space-7.22 mb-10 overflow-auto">
-								<div className="w-24 h-24 bg-secondary_white text-center px-5 py-3 rounded-md">
-									<h2 className="text-5xl leading-9 font-lato font-bold mb-2 days">
-										03
-									</h2>
-									<span className="text-xl leading-7.2 font-lato font-normal">
-										Day
-									</span>
-								</div>
-								<div className="w-24 h-24 bg-secondary_white text-center px-5 py-3 rounded-md">
-									<h2 className="text-5xl leading-9 font-lato font-bold mb-2 hours">
-										08
-									</h2>
-									<span className="text-xl leading-7.2 font-lato font-normal">
-										Hour
-									</span>
-								</div>
-								<div className="w-24 h-24 bg-secondary_white text-center px-5 py-3 rounded-md">
-									<h2 className="text-5xl leading-9 font-lato font-bold mb-2 minutes">
-										09
-									</h2>
-									<span className="text-xl leading-7.2 font-lato font-normal">
-										Minute
-									</span>
-								</div>
-								<div className="w-24 h-24 bg-secondary_white text-center px-5 py-3 rounded-md">
-									<h2 className="text-5xl leading-9 font-lato font-bold mb-2 seconds">
-										09
-									</h2>
-									<span className="text-xl leading-7.2 font-lato font-normal">
-										Sceond
-									</span>
-								</div>
-							</div>
-							<button className="py-6 px-20 md:px-24 rounded-lg text-xl leading-7.2 font-lato font-normal bg-primary text-secondary_white">
-								shop now
-							</button>
-						</div>
-						<div className="w-4/5 md:w-1/2 m-auto order-1 md:order-2 relative z-20">
-							<Image
-								className="w-full aspect-square"
-								src="/img/abatar-16.jpg"
-								alt=""
-								width={512}
-								height={512}
-							/>
-							<Image
-								className="absolute -translate-y-2/4 top-1/2 -right-10 z-30"
-								src="/img/abarar-bg.png"
-								alt=""
-								width={127}
-								height={107}
-							/>
-						</div>
-						<Image
-							className="absolute top-0 left-0"
-							src="/img/abarar-bg.png"
-							alt=""
-							width={127}
-							height={107}
-						/>
-					</div>
-				</div>
-			</section>
+			<DealOfTheDay />
 
 			{/* reviews */}
 			<section className="pb-10 sm:pb-16 md:pb-32">
-				<div className="container mx-auto px-4 lg:px-space-x-18 text-center mb-16">
+				<div className=" text-center mb-16">
 					<h2 className="text-5xl md:text-6xl md:leading-11 font-bold mb-8 capitalize">
 						what people say about us
 					</h2>
@@ -305,51 +236,51 @@ export default function Home() {
 						to make a type specimen book.
 					</p>
 				</div>
-				<div className="container mx-auto px-4 lg:px-space-x-18">
+				<div className="container">
 					<ReviewsSlider />
 				</div>
 			</section>
 
 			{/* instagram feed */}
 			<section className="relative">
-				<div className="container mx-auto">
+				<div className="container">
 					<div
-						className="flex justify-center flex-wrap 2xl:justify-center overflow-x-auto"
+						className="grid grid-cols-3 md:grid-cols-5"
 						id="scrollable_items">
 						<Image
 							src="/img/abatar-17.jpg"
 							alt="abatar"
 							width={288}
 							height={389}
-							className="object-cover"
+							className="object-cover w-full"
 						/>
 						<Image
 							src="/img/abatar-18.jpg"
 							alt="abatar"
 							width={288}
 							height={389}
-							className="object-cover"
+							className="object-cover w-full"
 						/>
 						<Image
 							src="/img/abatar-19.jpg"
 							alt="abatar"
 							width={288}
 							height={389}
-							className="object-cover"
+							className="object-cover w-full"
 						/>
 						<Image
 							src="/img/abatar-20.jpg"
 							alt="abatar"
 							width={288}
 							height={389}
-							className="object-cover"
+							className="object-cover w-full"
 						/>
 						<Image
 							src="/img/abatar-21.jpg"
 							alt="abatar"
 							width={288}
 							height={389}
-							className="object-cover"
+							className="object-cover w-full"
 						/>
 					</div>
 				</div>

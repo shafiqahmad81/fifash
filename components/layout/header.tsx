@@ -4,8 +4,8 @@ import React from "react";
 function Header() {
 	return (
 		<header className="bg-section_bg pt-5 md:pt-10 pb-4">
-			<div className="container mx-auto px-4 lg:px-space-x-18 flex md:items-center gap-1 sm:gap-3 lg:gap-6 relative">
-				<div className="">
+			<div className=" flex md:items-center gap-1 sm:gap-3 lg:gap-6 relative">
+				<div className="container">
 					<h2 className="text-2xl md:text-3.2xl md:leading-7.2 font-lato font-black">
 						FIFASH
 					</h2>

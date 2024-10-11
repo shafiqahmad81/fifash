@@ -8,6 +8,11 @@ const config: Config = {
 	],
 	theme: {
 		extend: {
+			container: {
+				center: true,
+				padding: "1.5rem",
+				screens: {},
+			},
 			colors: {
 				background: "hsl(var(--background))",
 				foreground: "hsl(var(--foreground))",
